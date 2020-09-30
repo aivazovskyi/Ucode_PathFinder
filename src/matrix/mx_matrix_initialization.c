@@ -11,8 +11,7 @@ void mx_matrix_initialization(t_finder *path, t_matrix *matrix) {
     memory_for_matrices(path, matrix);
     for (i = 0; i < path->num_islands; i++) {
         for (j = 0; j < path->num_islands; j++) {
-            i != j ? (matrix->table[i][j] = INT_MAX) 
-                       : (matrix->table[i][j] = 0);
+            matrix->table[i][j] = (i != j ? INT_MAX : 0);
         }
     }
     for (int ai = 0 ; (buf = mx_strchr(buf, ',')); ai +=2) {
