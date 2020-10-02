@@ -34,7 +34,7 @@ static int from_second_line(t_finder *path, char *str, int *line, int i) {
     if (str[i] == ',' && (!mx_isalpha(str[i - 1]) || !mx_isdigit(str[i + 1])))
         mx_print_invalid_line(*line, path);
     for (i++ ; str[i] != '\n'; i++)
-        if (!mx_isdigit(str[i]) || (INT_MAX < mx_atoi_long(&(str[i])))) 
+        if (!mx_isdigit(str[i]) || (INT_MAX < mx_atol(&(str[i])))) 
             mx_print_invalid_line(*line, path);
     if (str[i] != '\n')
         mx_print_invalid_line(*line, path);

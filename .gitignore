@@ -11,6 +11,5 @@ cmake-build-debug
 CMakeLists.txt
 tmain.c
 test.c
-check.sh
 beta
 Oracle

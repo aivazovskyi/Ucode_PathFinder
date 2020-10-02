@@ -1,6 +1,6 @@
 #include "libmx.h"
 
-long mx_atoi_long(const char *str) {
+long mx_atol(const char *str) {
     unsigned long n = 0;
     int i = 0;
     int ch = 1;
